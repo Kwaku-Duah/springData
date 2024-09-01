@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+
 @Entity
 @EqualsAndHashCode(callSuper = true) 
 @Data

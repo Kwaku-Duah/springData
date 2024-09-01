@@ -3,6 +3,8 @@ package com.springdata.tutorial.Entities.StaffEntities;
 import jakarta.persistence.*;
 import lombok.*;
 
+
+
 @Entity
 @Data
 @Table(name = "patients")

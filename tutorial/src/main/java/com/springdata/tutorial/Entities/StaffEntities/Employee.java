@@ -2,6 +2,8 @@ package com.springdata.tutorial.Entities.StaffEntities;
 import jakarta.persistence.*;
 import lombok.*;
 
+
+
 @Entity
 @Data
 @Inheritance(strategy = InheritanceType.JOINED)

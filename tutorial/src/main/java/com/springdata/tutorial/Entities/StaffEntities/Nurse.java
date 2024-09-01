@@ -4,6 +4,10 @@ package com.springdata.tutorial.Entities.StaffEntities;
 import jakarta.persistence.*;
 import lombok.*;
 
+
+
+
+
 @Entity
 @EqualsAndHashCode(callSuper = true) 
 @Data

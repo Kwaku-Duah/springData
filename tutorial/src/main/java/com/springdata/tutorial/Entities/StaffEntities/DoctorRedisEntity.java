@@ -6,6 +6,8 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+
+
 @Data
 @RedisHash("Doctor")
 public class DoctorRedisEntity implements Serializable {
