@@ -33,3 +33,9 @@ build/
 .vscode/
 application.properties
 application-dev.properties
+config/**
+controllers/**
+Repositories/**
+Services/**
+MongoDBEntities
+

@@ -11,8 +11,7 @@ public interface DoctorRepository extends JpaRepository<Doctor, Long> {
     List<Doctor> findBySpecialty(String specialty);
     
     // Find doctors by their department's ID
-    List<Doctor> findByDepartmentId(Long departmentId);
-    
-    // Find doctors assigned to a specific patient
-    List<Doctor> findByPatientsId(Long patientId);
+    List<Doctor> findByDepartment_Id(Long departmentId); 
+
+  
 }
