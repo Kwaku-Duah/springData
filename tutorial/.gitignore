@@ -35,6 +35,8 @@ application.properties
 application-dev.properties
 ### VS Code ###
 .vscode/
+
+# keeping these rooted
 config/
 controllers/
 Repositories/
