@@ -29,13 +29,14 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+
+# Exclude specific properties files
 application.properties
 application-dev.properties
-config/**
-controllers/**
-Repositories/**
-Services/**
-MongoDBEntities
-
+### VS Code ###
+.vscode/
+config/
+controllers/
+Repositories/
+Services/
+MongoDBEntities/
