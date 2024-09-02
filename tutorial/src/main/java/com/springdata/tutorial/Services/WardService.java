@@ -25,6 +25,11 @@ public class WardService {
         return wardRepository.save(ward);
     }
 
+    
+    /** 
+     * @param wardId
+     * @return Optional<Ward>
+     */
     public Optional<Ward> findWardById(Long wardId) {
         return wardRepository.findById(wardId);
     }

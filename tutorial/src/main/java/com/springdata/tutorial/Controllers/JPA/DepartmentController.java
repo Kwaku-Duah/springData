@@ -1,3 +1,7 @@
+/**
+ * The DepartmentController class in a Spring Boot application provides REST endpoints for managing
+ * Department entities using JPA.
+ */
 package com.springdata.tutorial.Controllers.JPA;
 
 

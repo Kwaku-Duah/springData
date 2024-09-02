@@ -1,3 +1,7 @@
+/**
+ * The NurseController class in a Spring Boot application provides REST endpoints for CRUD operations
+ * on Nurse entities.
+ */
 
 package com.springdata.tutorial.Controllers.JPA;
 
@@ -16,11 +20,6 @@ public class NurseController {
     @Autowired
     private NurseService nurseService;
 
-    
-    /** 
-     * @param nurse
-     * @return Nurse
-     */
     @PostMapping
     public Nurse saveNurse(@RequestBody Nurse nurse) {
         return nurseService.saveNurse(nurse);

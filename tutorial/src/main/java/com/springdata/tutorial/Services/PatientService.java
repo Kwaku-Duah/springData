@@ -39,6 +39,11 @@ public class PatientService {
         }
     }
 
+    
+    /** 
+     * @param patientId
+     * @return Optional<Patient>
+     */
     public Optional<Patient> findPatientById(Long patientId) {
         return patientRepository.findById(patientId);
     }

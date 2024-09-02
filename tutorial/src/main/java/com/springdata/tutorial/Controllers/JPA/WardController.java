@@ -1,3 +1,7 @@
+/**
+ * The WardController class in a Spring Boot application provides REST endpoints for managing Ward
+ * entities using JPA.
+ */
 package com.springdata.tutorial.Controllers.JPA;
 
 import com.springdata.tutorial.Entities.StaffEntities.Ward;

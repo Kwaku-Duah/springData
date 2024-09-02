@@ -28,6 +28,11 @@ public class NurseService {
         return nurseRepository.save(nurse);
     }
 
+    
+    /** 
+     * @param nurseId
+     * @return Optional<Nurse>
+     */
     @Transactional(readOnly = true)
     public Optional<Nurse> findNurseById(Long nurseId) {
         return nurseRepository.findById(nurseId);

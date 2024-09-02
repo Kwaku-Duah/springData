@@ -1,3 +1,7 @@
+/**
+ * The DoctorController class in a Spring Boot application provides REST endpoints for CRUD operations
+ * on Doctor entities using JPA.
+ */
 package com.springdata.tutorial.Controllers.JPA;
 
 

@@ -26,6 +26,10 @@ public class DoctorService {
         return doctorRepository.save(doctor);
     }
 
+    
+    /** 
+     * @return List<Doctor>
+     */
     @Transactional(readOnly = true)
     public List<Doctor> getAllDoctors() {
         return doctorRepository.findAll();

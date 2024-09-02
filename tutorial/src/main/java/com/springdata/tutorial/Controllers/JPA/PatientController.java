@@ -1,3 +1,7 @@
+/**
+ * The PatientController class in a Spring Boot application provides REST endpoints for managing
+ * patient entities using JPA.
+ */
 package com.springdata.tutorial.Controllers.JPA;
 
 import com.springdata.tutorial.Entities.StaffEntities.Patient;

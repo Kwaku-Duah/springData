@@ -27,6 +27,11 @@ public class DepartmentService {
         return departmentRepository.findAll();
     }
 
+    
+    /** 
+     * @param departmentId
+     * @return Optional<Department>
+     */
     @Cacheable(value = "departments", key = "#departmentId")
     @Transactional(readOnly = true)
     public Optional<Department> findDepartmentById(Long departmentId) {
