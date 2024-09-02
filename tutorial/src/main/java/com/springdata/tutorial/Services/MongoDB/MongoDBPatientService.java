@@ -26,6 +26,11 @@ public class MongoDBPatientService {
         return patientRepository.save(patient);
     }
 
+    
+    /** 
+     * @param patientId
+     * @return Optional<Patient>
+     */
     public Optional<Patient> findPatientById(String patientId) {
         return patientRepository.findById(patientId);
     }
