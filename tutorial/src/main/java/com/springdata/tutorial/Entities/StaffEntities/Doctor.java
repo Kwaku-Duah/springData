@@ -17,7 +17,7 @@ public class Doctor extends Employee {
     private String specialty;
 
     // Many-to-one relationship with Department
-    @ManyToOne(fetch = FetchType.LAZY) // or FetchType.EAGER, depending on your needs
+    @ManyToOne(fetch = FetchType.LAZY) 
     @JoinColumn(name = "department_id")
     private Department department;
 }
