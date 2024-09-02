@@ -22,6 +22,10 @@ public class PatientService {
     @Autowired
     private PlatformTransactionManager transactionManager;
 
+    
+    /** 
+     * @param patient
+     */
     public void savePatient(Patient patient) {
         TransactionDefinition definition = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(definition);
@@ -35,10 +39,19 @@ public class PatientService {
         }
     }
 
+    
+    /** 
+     * @param patientId
+     * @return Optional<Patient>
+     */
     public Optional<Patient> findPatientById(Long patientId) {
         return patientRepository.findById(patientId);
     }
 
+    
+    /** 
+     * @return List<Patient>
+     */
     public List<Patient> getAllPatients() {
         return patientRepository.findAll();
     }

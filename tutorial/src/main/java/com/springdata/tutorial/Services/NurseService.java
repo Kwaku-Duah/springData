@@ -18,16 +18,30 @@ public class NurseService {
     @Autowired
     private NurseRepository nurseRepository;
 
+    
+    /** 
+     * @param nurse
+     * @return Nurse
+     */
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
     public Nurse saveNurse(Nurse nurse) {
         return nurseRepository.save(nurse);
     }
 
+    
+    /** 
+     * @param nurseId
+     * @return Optional<Nurse>
+     */
     @Transactional(readOnly = true)
     public Optional<Nurse> findNurseById(Long nurseId) {
         return nurseRepository.findById(nurseId);
     }
 
+    
+    /** 
+     * @return List<Nurse>
+     */
     @Transactional(readOnly = true)
     public List<Nurse> getAllNurses() {
         return nurseRepository.findAll();

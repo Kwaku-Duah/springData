@@ -14,6 +14,11 @@ public class RedisController {
     @Autowired
     private RedisService redisService;
 
+    
+    /** 
+     * @param patient
+     * @return RedisPatientEntity
+     */
     @PostMapping("/patient")
     public RedisPatientEntity savePatientData(@RequestBody RedisPatientEntity patient) {
         redisService.savePatientData(patient);

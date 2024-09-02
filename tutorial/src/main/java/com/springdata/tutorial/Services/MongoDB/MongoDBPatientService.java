@@ -17,10 +17,20 @@ public class MongoDBPatientService {
     @Autowired
     private PatientMongoRepository patientRepository;
 
+    
+    /** 
+     * @param patient
+     * @return Patient
+     */
     public Patient savePatient(Patient patient) {
         return patientRepository.save(patient);
     }
 
+    
+    /** 
+     * @param patientId
+     * @return Optional<Patient>
+     */
     public Optional<Patient> findPatientById(String patientId) {
         return patientRepository.findById(patientId);
     }

@@ -1,3 +1,7 @@
+/**
+ * The DoctorController class in a Spring Boot application provides REST endpoints for CRUD operations
+ * on Doctor entities using JPA.
+ */
 package com.springdata.tutorial.Controllers.JPA;
 
 
@@ -17,6 +21,11 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
+    
+    /** 
+     * @param doctor
+     * @return Doctor
+     */
     @PostMapping
     public Doctor saveDoctor(@RequestBody Doctor doctor) {
         return doctorService.saveDoctor(doctor);

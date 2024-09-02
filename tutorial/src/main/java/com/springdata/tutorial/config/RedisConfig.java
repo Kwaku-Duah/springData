@@ -11,12 +11,20 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 public class RedisConfig {
 
+    
+    /** 
+     * @return JedisConnectionFactory
+     */
     @Bean
     public JedisConnectionFactory jedisConnectionFactory() {
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("localhost", 6379);
         return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
 
+    
+    /** 
+     * @return RedisTemplate<String, Object>
+     */
     @Bean
     public RedisTemplate<String, Object> redisTemplate() {
         RedisTemplate<String, Object> template = new RedisTemplate<>();

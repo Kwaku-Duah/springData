@@ -1,3 +1,7 @@
+/**
+ * The NurseController class in a Spring Boot application provides REST endpoints for CRUD operations
+ * on Nurse entities.
+ */
 
 package com.springdata.tutorial.Controllers.JPA;
 

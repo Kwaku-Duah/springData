@@ -1,11 +1,10 @@
 package com.springdata.tutorial.Entities.StaffEntities;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@EqualsAndHashCode(callSuper = true) 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Table(name = "nurses")
 public class Nurse extends Employee {
@@ -17,5 +16,8 @@ public class Nurse extends Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 
-}
+    @OneToOne
+    @JoinColumn(name = "supervisor_id")
+    private Nurse supervisor;
 
+}

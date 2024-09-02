@@ -1,7 +1,5 @@
 package com.springdata.tutorial.Controllers.JPA;
 
-
-
 import com.springdata.tutorial.Entities.StaffEntities.Department;
 import com.springdata.tutorial.Services.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +28,13 @@ public class DepartmentController {
     @GetMapping
     public List<Department> getAllDepartments() {
         return departmentService.getAllDepartments();
+    }
+
+    @PutMapping("/{id}")
+    public Department updateDepartment(@PathVariable Long id, @RequestBody Department department) {
+        // Set the provided ID to the department object
+        department.setId(id);
+        return departmentService.updateDepartment(department);
     }
 
     @DeleteMapping("/{id}")

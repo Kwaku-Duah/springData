@@ -16,16 +16,30 @@ public class DoctorService {
     @Autowired
     private DoctorRepository doctorRepository;
 
+    
+    /** 
+     * @param doctor
+     * @return Doctor
+     */
     @Transactional
     public Doctor saveDoctor(Doctor doctor) {
         return doctorRepository.save(doctor);
     }
 
+    
+    /** 
+     * @return List<Doctor>
+     */
     @Transactional(readOnly = true)
     public List<Doctor> getAllDoctors() {
         return doctorRepository.findAll();
     }
 
+    
+    /** 
+     * @param doctorId
+     * @return Optional<Doctor>
+     */
     @Transactional(readOnly = true)
     public Optional<Doctor> findDoctorById(Long doctorId) {
         return doctorRepository.findById(doctorId);
