@@ -17,6 +17,10 @@ public class DepartmentService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
+    
+    /** 
+     * @return List<Department>
+     */
     @Cacheable("departments")
     @Transactional(readOnly = true)
     public List<Department> getAllDepartments() {

@@ -17,6 +17,11 @@ public class MongoDBPatientService {
     @Autowired
     private PatientMongoRepository patientRepository;
 
+    
+    /** 
+     * @param patient
+     * @return Patient
+     */
     public Patient savePatient(Patient patient) {
         return patientRepository.save(patient);
     }

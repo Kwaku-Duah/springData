@@ -16,6 +16,11 @@ public class DoctorService {
     @Autowired
     private DoctorRepository doctorRepository;
 
+    
+    /** 
+     * @param doctor
+     * @return Doctor
+     */
     @Transactional
     public Doctor saveDoctor(Doctor doctor) {
         return doctorRepository.save(doctor);

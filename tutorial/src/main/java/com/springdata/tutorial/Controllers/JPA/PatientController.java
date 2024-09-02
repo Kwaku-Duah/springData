@@ -15,6 +15,10 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
+    
+    /** 
+     * @param patient
+     */
     @PostMapping
     public void savePatient(@RequestBody Patient patient) {
         patientService.savePatient(patient);

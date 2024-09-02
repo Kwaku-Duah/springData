@@ -16,6 +16,11 @@ public class NurseController {
     @Autowired
     private NurseService nurseService;
 
+    
+    /** 
+     * @param nurse
+     * @return Nurse
+     */
     @PostMapping
     public Nurse saveNurse(@RequestBody Nurse nurse) {
         return nurseService.saveNurse(nurse);

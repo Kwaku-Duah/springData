@@ -17,6 +17,11 @@ public class DoctorController {
     @Autowired
     private DoctorService doctorService;
 
+    
+    /** 
+     * @param doctor
+     * @return Doctor
+     */
     @PostMapping
     public Doctor saveDoctor(@RequestBody Doctor doctor) {
         return doctorService.saveDoctor(doctor);

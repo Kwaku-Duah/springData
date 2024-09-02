@@ -16,6 +16,11 @@ public class WardService {
     @Autowired
     private WardRepository wardRepository;
 
+    
+    /** 
+     * @param ward
+     * @return Ward
+     */
     public Ward saveWard(Ward ward) {
         return wardRepository.save(ward);
     }

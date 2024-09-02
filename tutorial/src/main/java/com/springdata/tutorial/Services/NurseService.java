@@ -18,6 +18,11 @@ public class NurseService {
     @Autowired
     private NurseRepository nurseRepository;
 
+    
+    /** 
+     * @param nurse
+     * @return Nurse
+     */
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
     public Nurse saveNurse(Nurse nurse) {
         return nurseRepository.save(nurse);

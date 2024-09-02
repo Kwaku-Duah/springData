@@ -22,6 +22,10 @@ public class PatientService {
     @Autowired
     private PlatformTransactionManager transactionManager;
 
+    
+    /** 
+     * @param patient
+     */
     public void savePatient(Patient patient) {
         TransactionDefinition definition = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(definition);

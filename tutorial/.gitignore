@@ -36,7 +36,9 @@ application-dev.properties
 ### VS Code ###
 .vscode/
 config/
-controllers/
+controllers/MongoDB/
+controllers/Redis/
 Repositories/
-Services/
+Services/MongoDB/
+Services/Redis/
 MongoDBEntities/

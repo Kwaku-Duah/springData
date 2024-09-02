@@ -30,6 +30,10 @@ public class RedisService {
     @Resource(name = "redisTemplate")
     private ListOperations<String, Object> listOps;
 
+    
+    /** 
+     * @param patient
+     */
     // Save or update patient data in Redis using Hashes
     public void savePatientData(RedisPatientEntity patient) {
         Map<String, Object> patientData = Map.of(

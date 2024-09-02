@@ -15,6 +15,11 @@ public class WardController {
     @Autowired
     private WardService wardService;
 
+    
+    /** 
+     * @param ward
+     * @return Ward
+     */
     @PostMapping
     public Ward saveWard(@RequestBody Ward ward) {
         return wardService.saveWard(ward);
