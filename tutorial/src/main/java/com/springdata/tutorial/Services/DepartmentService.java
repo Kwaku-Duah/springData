@@ -27,11 +27,6 @@ public class DepartmentService {
         return departmentRepository.findAll();
     }
 
-    
-    /** 
-     * @param departmentId
-     * @return Optional<Department>
-     */
     @Cacheable(value = "departments", key = "#departmentId")
     @Transactional(readOnly = true)
     public Optional<Department> findDepartmentById(Long departmentId) {
@@ -42,6 +37,16 @@ public class DepartmentService {
     @Transactional
     public Department saveDepartment(Department department) {
         return departmentRepository.save(department);
+    }
+
+    @CacheEvict(value = "departments", key = "#department.id")
+    @Transactional
+    public Department updateDepartment(Department department) {
+        if (departmentRepository.existsById(department.getId())) {
+            return departmentRepository.save(department);
+        } else {
+            throw new IllegalArgumentException("Department with id " + department.getId() + " does not exist.");
+        }
     }
 
     @CacheEvict(value = "departments", key = "#departmentId")

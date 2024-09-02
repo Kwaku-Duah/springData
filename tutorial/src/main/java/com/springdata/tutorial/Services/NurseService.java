@@ -38,6 +38,10 @@ public class NurseService {
         return nurseRepository.findById(nurseId);
     }
 
+    
+    /** 
+     * @return List<Nurse>
+     */
     @Transactional(readOnly = true)
     public List<Nurse> getAllNurses() {
         return nurseRepository.findAll();

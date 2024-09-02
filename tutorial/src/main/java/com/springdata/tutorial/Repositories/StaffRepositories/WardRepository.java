@@ -2,17 +2,11 @@ package com.springdata.tutorial.Repositories.StaffRepositories;
 
 import com.springdata.tutorial.Entities.StaffEntities.Ward;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface WardRepository extends JpaRepository<Ward, Long> {
-    
-    // Find wards by ward number
-    List<Ward> findByWardNumber(int wardNumber);
-    
-    // Find wards by department ID
-    List<Ward> findByDepartmentId(Long departmentId);
 
-    // Find wards by bed count
-    List<Ward> findByBedCountGreaterThan(int bedCount);
+    @Query("SELECT w FROM Ward w LEFT JOIN FETCH w.department LEFT JOIN FETCH w.supervisor WHERE w.id = :id")
+    Ward findByIdWithDetails(@Param("id") Long id);
 }

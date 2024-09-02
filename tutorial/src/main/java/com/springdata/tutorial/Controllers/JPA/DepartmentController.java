@@ -1,10 +1,4 @@
-/**
- * The DepartmentController class in a Spring Boot application provides REST endpoints for managing
- * Department entities using JPA.
- */
 package com.springdata.tutorial.Controllers.JPA;
-
-
 
 import com.springdata.tutorial.Entities.StaffEntities.Department;
 import com.springdata.tutorial.Services.DepartmentService;
@@ -21,11 +15,6 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    
-    /** 
-     * @param department
-     * @return Department
-     */
     @PostMapping
     public Department saveDepartment(@RequestBody Department department) {
         return departmentService.saveDepartment(department);
@@ -39,6 +28,13 @@ public class DepartmentController {
     @GetMapping
     public List<Department> getAllDepartments() {
         return departmentService.getAllDepartments();
+    }
+
+    @PutMapping("/{id}")
+    public Department updateDepartment(@PathVariable Long id, @RequestBody Department department) {
+        // Set the provided ID to the department object
+        department.setId(id);
+        return departmentService.updateDepartment(department);
     }
 
     @DeleteMapping("/{id}")

@@ -48,6 +48,10 @@ public class PatientService {
         return patientRepository.findById(patientId);
     }
 
+    
+    /** 
+     * @return List<Patient>
+     */
     public List<Patient> getAllPatients() {
         return patientRepository.findAll();
     }

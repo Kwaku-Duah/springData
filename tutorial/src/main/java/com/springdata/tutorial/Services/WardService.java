@@ -1,7 +1,5 @@
 package com.springdata.tutorial.Services;
 
-
-
 import com.springdata.tutorial.Entities.StaffEntities.Ward;
 import com.springdata.tutorial.Repositories.StaffRepositories.WardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,22 +14,12 @@ public class WardService {
     @Autowired
     private WardRepository wardRepository;
 
-    
-    /** 
-     * @param ward
-     * @return Ward
-     */
     public Ward saveWard(Ward ward) {
         return wardRepository.save(ward);
     }
 
-    
-    /** 
-     * @param wardId
-     * @return Optional<Ward>
-     */
     public Optional<Ward> findWardById(Long wardId) {
-        return wardRepository.findById(wardId);
+        return Optional.ofNullable(wardRepository.findByIdWithDetails(wardId));
     }
 
     public List<Ward> getAllWards() {

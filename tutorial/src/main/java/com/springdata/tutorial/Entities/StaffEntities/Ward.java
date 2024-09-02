@@ -1,9 +1,8 @@
 package com.springdata.tutorial.Entities.StaffEntities;
 
 import jakarta.persistence.*;
-import java.util.Set;
-
 import lombok.*;
+import java.util.Set;
 
 @Entity
 @Data
@@ -17,14 +16,15 @@ public class Ward {
     private int wardNumber;
     private int bedCount;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER) // Ensure this is EAGER
     @JoinColumn(name = "department_id")
     private Department department;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER) // Ensure this is EAGER
     @JoinColumn(name = "supervisor_id")
     private Nurse supervisor;
 
     @OneToMany(mappedBy = "ward")
     private Set<Patient> patients;
 }
+

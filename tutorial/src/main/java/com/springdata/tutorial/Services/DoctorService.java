@@ -35,6 +35,11 @@ public class DoctorService {
         return doctorRepository.findAll();
     }
 
+    
+    /** 
+     * @param doctorId
+     * @return Optional<Doctor>
+     */
     @Transactional(readOnly = true)
     public Optional<Doctor> findDoctorById(Long doctorId) {
         return doctorRepository.findById(doctorId);
